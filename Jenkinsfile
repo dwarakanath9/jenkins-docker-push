@@ -19,18 +19,13 @@ pipeline {
                 bat 'docker image list'
                 }
         }
-
-
                 stage("Push Image to Docker Hub"){
                     steps{
                        withCredentials([string(credentialsId: 'docker_password_1', variable: 'DPASSWORD')]){
-                          bat 'echo %DPASSWORD%'
-                           bat 'echo %docker_password_1%'
                           bat 'docker login -u dwarak1262 -p %DPASSWORD%'
                         }
                          bat 'docker push  dwarak1262/jenkins-docker-k8s'
                     }
                 }
-
     }
 }
