@@ -17,7 +17,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String sayHelloDocker(){
-        return "Hellow i am from docker hellow 1 test";
+        return "Hellow git  am from docker hellow 1 test";
     }
 
     @GetMapping("/hello/{name}")
